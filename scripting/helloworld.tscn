@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://helloworld.gd" type="Script" id=1]
+[ext_resource path="res://Label.gd" type="Script" id=2]
+
+[node name="Panel" type="Panel"]
+margin_right = 94.0
+margin_bottom = 72.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 86.0
+margin_bottom = 26.0
+text = "a label"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 24.3665
+margin_top = 41.2163
+margin_right = 71.3665
+margin_bottom = 61.2163
+text = "press"
+[connection signal="pressed" from="Button" to="." method="_on_nodeButton_signalPressed"]
