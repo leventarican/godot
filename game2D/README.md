@@ -3,7 +3,7 @@
 * scene tree
 ```
 Main scene
-	Player scene
+	Player scene: Area2D node
 	Mob scene
 	HUD scene
 ```

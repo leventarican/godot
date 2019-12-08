@@ -18,6 +18,7 @@ _global_script_class_icons={
 config/name="game2D"
 config/icon="res://icon.png"
 
-[rendering]
+[display]
 
-environment/default_environment="res://default_env.tres"
+window/size/width=480
+window/size/height=720
