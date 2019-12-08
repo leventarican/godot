@@ -14,7 +14,7 @@ func _on_HUD_start_game():
 func show_game_over():
 	show_message("Game Over")
 	yield($MessageTimer, "timeout")
-	$MessageLabel.text = "Dodge the\nCreeps!"
+	$MessageLabel.text = "Canavar\n'lardan\nKac!"
 	$MessageLabel.show()
 	yield(get_tree().create_timer(1), 'timeout')
 	$StartButton.show()

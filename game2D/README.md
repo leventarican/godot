@@ -3,7 +3,7 @@
 * scene tree
 ```
 Main scene
-	Player scene: Area2D node
-	Mob scene
-	HUD scene
+	Player scene: Area2D node; instance in Main
+	Mob scene: RigidBody2D node; is a Script Variable of Main scene
+	HUD scene: CanvasLayer node; instance in Main
 ```
