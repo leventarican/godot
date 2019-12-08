@@ -66,12 +66,13 @@ func _process(delta):
 
 # on collision: signal hit
 func _on_Player_body_entered(body):
-    hide()  # Player disappears after being hit.
-    emit_signal("hit")
-    $CollisionShape2D.set_deferred("disabled", true)
+	hide()  # Player disappears after being hit.
+	emit_signal("hit")
+	$CollisionShape2D.set_deferred("disabled", true)
 
 # reset game
 func start(pos):
-    position = pos
-    show()
-    $CollisionShape2D.disabled = false
+	print_debug('START#')
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
