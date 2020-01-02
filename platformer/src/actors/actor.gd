@@ -8,5 +8,6 @@ export var gravity: = 3500.0
 
 var _velocity: = Vector2.ZERO
 
+# apply gravity for all actors
 func _physics_process(delta: float) -> void:
 	_velocity.y += gravity * delta
