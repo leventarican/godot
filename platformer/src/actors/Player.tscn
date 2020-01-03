@@ -12,7 +12,7 @@ script = ExtResource( 1 )
 speed = Vector2( 800, 1400 )
 
 [node name="player" type="Sprite" parent="."]
-position = Vector2( 0, -32 )
+position = Vector2( 0, -30 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
