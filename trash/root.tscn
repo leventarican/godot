@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://root.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Sprite.gd" type="Script" id=3]
+[ext_resource path="res://Button.gd" type="Script" id=4]
+[ext_resource path="res://Sprite_controlable.gd" type="Script" id=5]
+[ext_resource path="res://Sprite_gravity.gd" type="Script" id=6]
 
 [node name="root" type="Node"]
 script = ExtResource( 1 )
@@ -14,6 +17,13 @@ margin_bottom = 14.0
 rect_scale = Vector2( 3, 3 )
 text = "FPS"
 
+[node name="Label_button" type="Label" parent="."]
+margin_left = 532.906
+margin_top = 563.348
+margin_right = 554.906
+margin_bottom = 577.348
+text = "button"
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 50, 50 )
 texture = ExtResource( 2 )
@@ -22,3 +32,22 @@ script = ExtResource( 3 )
 [node name="Sprite" type="Sprite" parent="Sprite"]
 position = Vector2( 50, 50 )
 texture = ExtResource( 2 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 467.707
+margin_top = 559.849
+margin_right = 479.707
+margin_bottom = 579.849
+text = "reset"
+script = ExtResource( 4 )
+
+[node name="Sprite_controlable" type="Sprite" parent="."]
+position = Vector2( 66.482, 299.752 )
+texture = ExtResource( 2 )
+script = ExtResource( 5 )
+
+[node name="Sprite_gravity" type="Sprite" parent="."]
+position = Vector2( 709, 40 )
+texture = ExtResource( 2 )
+script = ExtResource( 6 )
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
