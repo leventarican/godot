@@ -1,0 +1,13 @@
+README-hidden.md
+
+# projects
+code0/
+grid/
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Mono-specific ignores
+.mono/
