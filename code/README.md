@@ -1,5 +1,7 @@
 # Drag and Drop example
-* based on: https://www.youtube.com/watch?v=usWuBrrh5lQ
+* based on: 
+    * https://www.youtube.com/watch?v=usWuBrrh5lQ
+    * godot grid tutorial
 * assets based on: https://www.kenney.nl/assets/animal-pack-redux
 
 ## About
@@ -7,12 +9,12 @@
 * _Inventory_: is the main scene. here the grapping is implemented
     * we want to drag the items from _GridPackPack_ to _EquipmentSlots_
 * for each of these nodes a script implements the behaviour:
-``` 
+```
 ItemRepository.gd
 Inventory.gd
 GridPackPack.gd
 EquipmentSlots.gd
-``` 
+```
 * aside this we have 3 scenes
 * `ItemRepository.tscn` contains our items
 * `ItemBase.tscn` base on `TextureRect`. This is a kind of placeholder for the images. On load the Images are loaded dynamically in `Inventury.gd`
@@ -30,4 +32,5 @@ func _ready():
     * Project > Project Settings > Autload > Add the scene
     * example access: `ItemRepository.get_item (...`
 
+## Screenshots
 ![screenshot](screenshot.png)

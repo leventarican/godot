@@ -1,6 +1,6 @@
 extends Control
 
-const item_base = preload("res://ItemBase.tscn")
+const item_base = preload("res://scenes/ItemBase.tscn")
 
 onready var inv_base = $InventoryBase
 onready var grid_bkpk = $GridBackPack

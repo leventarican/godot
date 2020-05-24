@@ -1,6 +1,6 @@
 extends Node
 
-const IMAGE_PATH = "res://assets/kenney/"
+const IMAGE_PATH = "res://assets/"
 const ITEMS = {
 	"bear": {
 		"icon": IMAGE_PATH + "bear.png",
