@@ -42,12 +42,6 @@ extents = Vector2( 16, 16 )
 
 [node name="Game" type="Node2D"]
 
-[node name="Inventory" parent="." instance=ExtResource( 6 )]
-margin_left = 1499.57
-margin_top = 275.041
-margin_right = 1499.57
-margin_bottom = 275.041
-
 [node name="Grid" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 format = 1
@@ -124,3 +118,9 @@ __meta__ = {
 
 [node name="Obstacle" parent="Grid" instance=ExtResource( 5 )]
 position = Vector2( 672, 352 )
+
+[node name="Inventory" parent="." instance=ExtResource( 6 )]
+margin_left = 1290.05
+margin_top = 265.997
+margin_right = 1290.05
+margin_bottom = 265.997

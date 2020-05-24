@@ -3,6 +3,10 @@ extends Node
 # autoload this script: project settings > autoload
 
 func _ready():
+	# startup()
+	pass
+
+func startup():
 	var root = get_tree().root as Viewport
 	# Viewport has the signal size_changed()
 	root.connect("size_changed", self, "resize")

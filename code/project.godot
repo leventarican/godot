@@ -16,17 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="Code"
-run/main_scene="res://under-construction/root.tscn"
+run/main_scene="res://scenes/Game.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 ItemRepository="*res://scenes/ItemRepository.tscn"
-Startup="*res://under-construction/startup.gd"
+Startup="res://under-construction/startup.gd"
 
 [display]
 
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
 
 [input]
 
