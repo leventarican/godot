@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/tileset_full.png" type="Texture" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="earth" type="Sprite" parent="."]
+position = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 48, 80, 16, 16 )
+
+[node name="rock" type="Sprite" parent="."]
+position = Vector2( 32, 8 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 224, 160, 16, 16 )
+
+[node name="back0" type="Sprite" parent="."]
+position = Vector2( 160, 96 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 352, 176, 320, 192 )
+
+[node name="back1" type="Sprite" parent="."]
+position = Vector2( 160, 72 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 16, 224, 320, 144 )
