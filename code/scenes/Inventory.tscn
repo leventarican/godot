@@ -17,20 +17,20 @@ __meta__ = {
 }
 
 [node name="InventoryBase" type="Panel" parent="."]
-margin_left = -464.0
-margin_top = -252.0
-margin_right = 416.0
-margin_bottom = 300.0
+margin_left = -1648.0
+margin_top = -300.0
+margin_right = 640.0
+margin_bottom = 1108.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="EquipmentSlots" type="Panel" parent="."]
 self_modulate = Color( 0.454902, 0.454902, 0.454902, 1 )
-margin_left = 48.0
-margin_top = -236.0
-margin_right = 392.0
-margin_bottom = 276.0
+margin_left = 144.0
+margin_top = -205.0
+margin_right = 496.0
+margin_bottom = 675.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -92,21 +92,26 @@ __meta__ = {
 
 [node name="GridBackPack" type="TextureRect" parent="."]
 self_modulate = Color( 0.466667, 0.470588, 0.47451, 1 )
-margin_left = -432.0
-margin_top = -244.0
-margin_right = 16.0
-margin_bottom = 100.0
+margin_left = -456.0
+margin_top = -205.0
+margin_right = 128.0
+margin_bottom = 916.0
 texture = ExtResource( 1 )
+expand = true
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = -292.0
-margin_top = 117.0
-margin_right = -236.0
-margin_bottom = 139.0
+margin_left = 240.0
+margin_top = 732.0
+margin_right = 296.0
+margin_bottom = 754.0
 rect_scale = Vector2( 3, 3 )
 text = "Play"
 icon = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="EquipmentSlots" method="_on_Button_pressed"]

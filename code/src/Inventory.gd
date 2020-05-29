@@ -14,9 +14,14 @@ var last_pos = Vector2()
 func _ready():
 	pickup_item("bear")
 	pickup_item("chicken")
-	pickup_item("cow")
-	pickup_item("rabbit")
-	pickup_item("giraffe")
+	#pickup_item("cow")
+	#pickup_item("rabbit")
+	#pickup_item("giraffe")
+	
+	print("ready. TextureRect = ItemBase")
+	var items = get_children()
+	for i in items:
+		print(i)
 
 func _process(delta):
 	var cursor_pos = get_global_mouse_position()
@@ -42,10 +47,12 @@ func release(cursor_pos):
 	if item_held == null:
 		return
 	var c = get_container_under_cursor(cursor_pos)
+	print("c: ", c)
 	if c == null:
 		drop_item()
 	elif c.has_method("insert_item"):
 		if c.insert_item(item_held):
+			print(item_held)
 			item_held = null
 		else:
 			return_item()
@@ -75,6 +82,9 @@ func pickup_item(item_id):
 	item.set_meta("id", item_id)
 	item.texture = load(ItemRepository.get_item(item_id)["icon"])
 	add_child(item)
+	
+	
+	
 	if !grid_bkpk.insert_item_at_first_available_spot(item):
 		item.queue_free()
 		return false

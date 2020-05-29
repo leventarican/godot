@@ -11,6 +11,7 @@ func _ready():
 func insert_item(item):
 	var item_pos = item.rect_global_position + item.rect_size / 2
 	var slot = get_slot_under_pos(item_pos)
+	print("slot: ", slot)
 	if slot == null:
 		return false
 	
@@ -45,3 +46,13 @@ func get_thing_under_pos(arr, pos):
 		if thing != null and thing.get_global_rect().has_point(pos):
 			return thing
 	return null
+
+
+func _on_Button_pressed():
+#	for slot in slots:
+#		print(slot.get_global_rect())
+	
+	var l = Label.new()
+	l.text = "GODOT"
+	l.set_position(Vector2(100.0, 330.0))
+	add_child(l)
