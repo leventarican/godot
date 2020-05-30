@@ -32,3 +32,7 @@ func offset():
 	# do some offset: The transform's translation offset.
 	t[2] = Vector2(-300.0, 100.0)
 	v.canvas_transform = t
+
+
+func _on_Button2_pressed():
+	var eq = get_tree().get_root().get_child(get_tree().get_root().get_child_count()-1).get_node("EquipmentSlot")

@@ -14,9 +14,9 @@ var last_pos = Vector2()
 func _ready():
 	pickup_item("bear")
 	pickup_item("chicken")
-	#pickup_item("cow")
-	#pickup_item("rabbit")
-	#pickup_item("giraffe")
+	pickup_item("cow")
+	pickup_item("rabbit")
+	pickup_item("giraffe")
 	
 	print("ready. TextureRect = ItemBase")
 	var items = get_children()
@@ -78,9 +78,13 @@ func return_item():
 
 func pickup_item(item_id):
 	var item = item_base.instance()
-	print( item.name )
+	print("item name: ", item.name, "; item id: ", item_id)
 	item.set_meta("id", item_id)
 	item.texture = load(ItemRepository.get_item(item_id)["icon"])
+	
+	#ItemRepository.get_item(item_id)
+	#{icon:res://assets/bear.png, slot:ANIMAL0}
+	
 	add_child(item)
 	
 	
@@ -89,3 +93,11 @@ func pickup_item(item_id):
 		item.queue_free()
 		return false
 	return true
+
+
+
+func _on_Button_pressed_():
+	var items = eq_slots.get_items()
+	for i in items.values():
+		if i != null:
+			print(i.get_meta("id"))

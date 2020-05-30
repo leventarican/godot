@@ -51,8 +51,12 @@ func get_thing_under_pos(arr, pos):
 func _on_Button_pressed():
 #	for slot in slots:
 #		print(slot.get_global_rect())
-	
-	var l = Label.new()
-	l.text = "GODOT"
-	l.set_position(Vector2(100.0, 330.0))
-	add_child(l)
+	print("button")
+	for i in get_children():
+		print(i.name)
+	for i in items.values():
+		if i != null:
+			print(i.get_meta("id"))
+
+func get_items():
+	return items
